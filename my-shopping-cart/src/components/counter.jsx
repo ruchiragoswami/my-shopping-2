@@ -11,6 +11,13 @@ class Counter extends React.Component {
         display: "block"
     }
 
+
+    renderTags() {
+        if (this.state.tags.length === 0) return <p> There are no tags!</p>
+
+        return <ul> {this.state.tags.map(tag => <li key={tag}> {tag} </li>) } </ul>
+    }
+
     render() { 
         return ( 
             <div> 
@@ -18,12 +25,17 @@ class Counter extends React.Component {
                 <img style={this.imgDisplay} src={this.state.imgUrl} />         
                 <span  className={this.getBadgeClasses()}> {this.formatCount()} </span>          
                 <button className='btn btn-secondary btn-sm'> Increment </button>
-                <ul>
+                <div> 
+                    {this.renderTags()}
+                </div>
+                {/* <ul>
                     {this.state.tags.map(tag => <li key={tag}>{tag}</li>)}
-                </ul>
+                </ul> */}
             </div>
         );
     }
+
+    
 
     getBadgeClasses() {
         let classes = "badge m-2 badge-";
