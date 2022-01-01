@@ -4,13 +4,17 @@ class Counter extends React.Component {
     state = {
         count: 0,
         imgUrl: 'https://picsum.photos/200',
-        tags : ['tag1', 'tag2', 'tag3']
+        tags : ['tag1', 'tag2', 'tag3'],
+        // products : []
     };
 
     imgDisplay = {
         display: "block"
     }
 
+    // product = {
+    //     id : [1, 2, 3, 4 ]
+    // }
 
     renderTags() {
         if (this.state.tags.length === 0) return <p> There are no tags!</p>
@@ -18,7 +22,8 @@ class Counter extends React.Component {
         return <ul> {this.state.tags.map(tag => <li key={tag}> {tag} </li>) } </ul>
     }
 
-    handleIncrement = () =>  {
+    handleIncrement = product =>  {
+        console.log(product); 
         console.log("Increment clicked", this);
         this.setState({count: this.state.count + 1 })
     }
@@ -29,7 +34,10 @@ class Counter extends React.Component {
                 <h1 style= {{fontSize: 35}}> Heading 1 </h1>
                 <img style={this.imgDisplay} src={this.state.imgUrl} />         
                 <span  className={this.getBadgeClasses()}> {this.formatCount()} </span>          
-                <button onClick={this.handleIncrement}  className='btn btn-secondary btn-sm'> Increment </button>
+                <button 
+                    onClick={() =>  this.handleIncrement({id: 1})}  
+                    className='btn btn-secondary btn-sm'> Increment 
+                </button>
                 <div> 
                     {this.renderTags()}
                 </div>
