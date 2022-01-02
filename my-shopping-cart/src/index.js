@@ -1,7 +1,8 @@
 import React from 'react'; 
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'; 
-import Counter from './components/counter'; 
+// import Counter from './components/counter'; 
+import Counters from './components/counters'; 
 
 /**  
     const element = <h1>Hello World</h1>; 
@@ -9,4 +10,4 @@ import Counter from './components/counter';
     ReactDOM.render(element, document.querySelector("#root")); 
 */
 
-ReactDOM.render(<Counter /> , document.querySelector("#root")); 
+ReactDOM.render(<Counters /> , document.querySelector("#root")); 
