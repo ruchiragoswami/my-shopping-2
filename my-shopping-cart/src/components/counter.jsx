@@ -8,17 +8,17 @@ class Counter extends React.Component {
         
     };
 
-    imgDisplay = {
-        display: "block"
-    }
+    // imgDisplay = {
+    //     display: "block"
+    // }
 
     
 
-    renderTags() {
-        if (this.state.tags.length === 0) return <p> There are no tags!</p>
+    // renderTags() {
+    //     if (this.state.tags.length === 0) return <p> There are no tags!</p>
 
-        return <ul> {this.state.tags.map(tag => <li key={tag}> {tag} </li>) } </ul>
-    }
+    //     return <ul> {this.state.tags.map(tag => <li key={tag}> {tag} </li>) } </ul>
+    // }
 
     handleIncrement = product =>  {
         console.log(product); 
