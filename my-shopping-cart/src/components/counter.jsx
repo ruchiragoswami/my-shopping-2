@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
 class Counter extends React.Component {
-    state = {
-        count: this.props.counter.value    
-    };    
+    // state = {
+    //     count: this.props.counter.value    
+    // };    
+
+
 
     handleIncrement = () =>  {
         // console.log(product); 
@@ -61,3 +63,9 @@ function hanclde(){ console.log("hello")}
 
  
 export default Counter;
+
+
+/*
+removed local state
+local state of component removed. This ensures we have a single source of truth
+*/
