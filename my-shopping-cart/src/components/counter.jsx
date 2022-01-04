@@ -1,10 +1,10 @@
-// import React, { Component } from 'react';
-import React from 'react'; 
+import React, { Component } from 'react';
+// import React from 'react'; 
 
 class Counter extends React.Component {
-    // state = {
-    //     count: this.props.counter.value    
-    // };    
+    state = {
+        count: this.props.counter.value    
+    };    
 
 
 
@@ -13,6 +13,8 @@ class Counter extends React.Component {
         console.log("Increment clicked", this);
         this.setState({count: this.state.count + 1 });
     }
+
+
 
     render() { 
         // console.log('props', this.props);
