@@ -14,6 +14,12 @@ class Counters  extends React.Component {
         ]
     }
 
+    handleIncrement = counter => {
+        console.log(counter); 
+    }
+
+
+
     handleDelete = counterId => { 
         console.log("Event Handler called- delete", counterId);
 
@@ -44,6 +50,7 @@ class Counters  extends React.Component {
                 <Counter 
                     key={counter.id} 
                     onDelete={this.handleDelete}
+                    onIncrement={this.handleIncrement}
                     counter={counter} />
                )}
                 
