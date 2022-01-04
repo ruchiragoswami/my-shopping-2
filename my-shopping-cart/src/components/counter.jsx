@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+import React from 'react'; 
 
 class Counter extends React.Component {
     // state = {
@@ -59,7 +60,7 @@ class Counter extends React.Component {
 
 }
 
-function hanclde(){ console.log("hello")}
+// function handle(){ console.log("hello")}
 
  
 export default Counter;
